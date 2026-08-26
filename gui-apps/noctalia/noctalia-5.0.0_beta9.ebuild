@@ -5,18 +5,17 @@ EAPI=8
 
 inherit meson optfeature xdg
 
-MY_PV="${PV/_/-}"
-MY_PV="${MY_PV:0:-1}.${MY_PV: -1}"
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="A lightweight Wayland shell and bar built directly on Wayland + OpenGL ES"
 HOMEPAGE="https://noctalia.dev/ https://github.com/noctalia-dev/noctalia"
 
-SRC_URI="https://github.com/noctalia-dev/noctalia/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${MY_P}"
+# Upstream release tag (v5.0.0-beta.9)
+MY_PV="5.0.0-beta.9"
+SRC_URI="https://github.com/noctalia-dev/noctalia/archive/v${MY_PV}.tar.gz"
+S="${WORKDIR}/noctalia-${MY_PV}"
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64"
 
 IUSE="+jemalloc"
 
