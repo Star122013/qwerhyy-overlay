@@ -1,0 +1,10 @@
+# portage working artifacts
+*.pyc
+__pycache__/
+.metadata/
+distfiles/
+packages/
+local/
+
+# keep directory placeholders
+!.gitkeep
