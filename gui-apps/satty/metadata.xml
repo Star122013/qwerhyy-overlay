@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>qwerhyy@local</email>
+		<name>qwerhyy</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">Satty-org/Satty</remote-id>
+	</upstream>
+	<longdescription>
+		Satty is a modern screenshot annotation tool, inspired by Swappy
+		and Flameshot. It uses GTK4 and a custom OpenGL rendering engine.
+	</longdescription>
+</pkgmetadata>
