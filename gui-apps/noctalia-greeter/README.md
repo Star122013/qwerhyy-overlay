@@ -53,6 +53,19 @@ rc-service display-manager restart
 
 This kills the currently running DM session first — save your work.
 
+## User avatars
+
+The greeter reads avatars from D-Bus `org.freedesktop.Accounts` (AccountService)
+— it has **no** `~/.face` fallback of its own. So profile pictures need
+`sys-apps/accountsservice`.
+
+- Package: `sys-apps/accountsservice`.
+- Requires the system D-Bus to be running (the daemon is D-Bus auto-activated).
+- Give each user an avatar file either at
+  `/var/lib/AccountsService/icons/<username>` or in the home dir as `~/.face`,
+  then trigger a refresh (e.g. alter the user via an account manager or
+  restart the accountsservice / D-Bus session).
+
 ## PAM
 
 No `setup_greetd_pam.sh` patch is needed on Gentoo. The package-installed
