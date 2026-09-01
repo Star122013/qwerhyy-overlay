@@ -41,7 +41,7 @@ DEPEND="
 
 RDEPEND="
 	${DEPEND}
-	app-display/greetd
+	gui-libs/greetd
 	sys-apps/dbus
 	sys-libs/pam
 "
