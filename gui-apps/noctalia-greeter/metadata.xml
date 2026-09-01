@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type = "person">
+		<email>qwerhyy@local</email>
+		<name>qwerhyy</name>
+	</maintainer>
+	<upstream>
+		<doc>https://docs.noctalia.dev</doc>
+		<remote-id type="github">noctalia-dev/noctalia-greeter</remote-id>
+	</upstream>
+	<longdescription>
+		Noctalia Greeter is a minimal login greeter for greetd that matches
+		the look and feel of Noctalia Shell. It lets you pick a user, enter
+		your password, choose a Wayland session, and pick a color scheme.
+		It bundles a wlroots compositor (noctalia-greeter-compositor) and
+		greetd should run the noctalia-greeter-session wrapper. No Qt or
+		GTK dependency.
+	</longdescription>
+</pkgmetadata>
