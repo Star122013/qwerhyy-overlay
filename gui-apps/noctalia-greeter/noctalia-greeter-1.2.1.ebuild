@@ -51,3 +51,20 @@ BDEPEND="
 	dev-util/wayland-scanner
 	virtual/pkgconfig
 "
+
+pkg_postinst() {
+	# State dir for greeter.toml / sync.toml / wallpapers, owned by the
+	# greetd session user so the greeter can write config (PACKAGING.md).
+	mkdir -p \
+		"${EROOT}"/var/lib/noctalia-greeter
+	chown greetd:greetd \
+		"${EROOT}"/var/lib/noctalia-greeter
+	chmod 0750 \
+		"${EROOT}"/var/lib/noctalia-greeter
+
+	ewarn "Point greetd at the greeter in /etc/greetd/config.toml:"
+	ewarn "  [default_session]"
+	ewarn "  command = \"/usr/bin/noctalia-greeter-session\""
+	ewarn "  user = \"greetd\""
+	ewarn "and set DISPLAYMANAGER=\"greetd\" in /etc/conf.d/display-manager."
+}
