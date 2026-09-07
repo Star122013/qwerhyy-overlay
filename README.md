@@ -13,6 +13,16 @@ directory, switched by the atom. Plain `emerge gui-apps/monstar` picks the live
 `9999`; use `'=gui-apps/monstar-1.0.1'` (or `'=gui-apps/zmx-0.8.1'`) for the
 pinned release.
 
+> **Tip:** `gui-apps/monstar` and `gui-apps/zmx` both build with `zig build`,
+> which fetches pinned git dependencies (ghostty, zig-wayland, z2d, ...) over
+> the network **during** `src_compile`/`src_install`. With Gentoo's
+> `network-sandbox` feature enabled (or any sandbox blocking build-time
+> network), these fails with `NameServerFailure`. Either disable
+> `network-sandbox` for these packages (e.g. `/etc/portage/package.env` with
+> `FEATURES="-network-sandbox"`), or pre-warm the zig global cache
+> (`~/.cache/zig`, and for root builds `/root/.cache/zig`) so no fetch is
+> needed.
+
 ## Layout
 
 ```
