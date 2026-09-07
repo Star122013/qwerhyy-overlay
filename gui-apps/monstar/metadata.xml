@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>qwerhyy@local</email>
+		<name>qwerhyy</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">rockorager/monstar</remote-id>
+	</upstream>
+	<longdescription>
+		Monstar is a native Wayland terminal emulator built on libghostty,
+		CPU-rendered (like foot). It features fractional scaling, IME,
+		activation and background blur, Kitty graphics, OSC 8 hyperlinks,
+		scrollback search and rectangular block selection, XDG desktop
+		portals and optional D-Bus/systemd integration. It is written in
+		Zig and built with the zig build system.
+	</longdescription>
+</pkgmetadata>

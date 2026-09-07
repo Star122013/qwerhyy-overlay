@@ -5,6 +5,10 @@ Personal Gentoo overlay for software not in ::gentoo.
 ## Contents
 
 - `gui-apps/noctalia` — the Noctalia Wayland desktop shell
+- Register `gui-apps/monstar` — the Monstar Wayland terminal
+- `gui-apps/monstar-9999.ebuild` vs `monstar-1.0.1.ebuild` — two versions in one
+  package, selected by the atom. Plain `emerge gui-apps/monstar` picks the
+  live `9999`; use `'=gui-apps/monstar-1.0.1'` for the pinned release.
 
 ## Layout
 
