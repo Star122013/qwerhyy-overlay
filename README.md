@@ -5,10 +5,13 @@ Personal Gentoo overlay for software not in ::gentoo.
 ## Contents
 
 - `gui-apps/noctalia` — the Noctalia Wayland desktop shell
-- Register `gui-apps/monstar` — the Monstar Wayland terminal
-- `gui-apps/monstar-9999.ebuild` vs `monstar-1.0.1.ebuild` — two versions in one
-  package, selected by the atom. Plain `emerge gui-apps/monstar` picks the
-  live `9999`; use `'=gui-apps/monstar-1.0.1'` for the pinned release.
+- `gui-apps/monstar` — the Monstar Wayland terminal (9999 live / 1.0.1 pinned)
+- `gui-apps/zmx` — the zmx terminal session attach/detach tool (9999 / 0.8.1)
+
+Each `*-9999` package also carries a pinned release ebuild in the same
+directory, switched by the atom. Plain `emerge gui-apps/monstar` picks the live
+`9999`; use `'=gui-apps/monstar-1.0.1'` (or `'=gui-apps/zmx-0.8.1'`) for the
+pinned release.
 
 ## Layout
 

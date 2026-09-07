@@ -3,34 +3,19 @@
 
 EAPI=8
 
-# ---------------------------------------------------------------------------
-# Two build modes share this one ebuild body, selected by ${PV}:
-#   * 9999  - live git checkout (inherits git-r3)
-#   * 1.0.1 - pinned release-tarball build (default portage unpack)
-# Portage resolves the version by the requested atom:
-#   emerge -av '=gui-apps/monstar-1.0.1'   # release
-#   emerge -av '=gui-apps/monstar-9999'    # latest git HEAD
-# `emerge gui-apps/monstar` (no atom) picks the highest: the 9999 live build.
-# ---------------------------------------------------------------------------
-
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/rockorager/monstar"
-	KEYWORDS=""
-else
-	MY_PV="1.0.1"
-	SRC_URI="https://github.com/rockorager/monstar/archive/v${MY_PV}.tar.gz"
-	S="${WORKDIR}/monstar-${MY_PV}"
-	KEYWORDS="~amd64"
-fi
+MY_PV="1.0.1"
 
 inherit xdg
+
+SRC_URI="https://github.com/rockorager/monstar/archive/v${MY_PV}.tar.gz"
+S="${WORKDIR}/monstar-${MY_PV}"
 
 DESCRIPTION="A fast CPU-rendered Wayland terminal emulator built on libghostty (like foot)"
 HOMEPAGE="https://github.com/rockorager/monstar"
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64"
 
 # dbus compiles in a native D-Bus client for notifications, xdg-desktop-portal
 # link/file opening, desktop appearance tracking, and systemd-scope cgroup

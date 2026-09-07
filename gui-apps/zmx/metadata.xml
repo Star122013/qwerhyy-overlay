@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>qwerhyy@local</email>
+		<name>qwerhyy</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">neurosnap/zmx</remote-id>
+	</upstream>
+	<longdescription>
+		zmx is a session attach/detach tool for the terminal (a modern tmux
+		alternative). It persists terminal shell sessions, lets you attach and
+		detach without killing them, supports multiple clients per session, and
+		restores the previous terminal state and scrollback on re-attach using
+		libghostty-vt. It is written in Zig. It does not provide windows, tabs,
+		or splits, deferring window management to the OS.
+	</longdescription>
+</pkgmetadata>
